@@ -1,0 +1,195 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: black;
+    font-size: 14px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    background-color: white;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 98%;
+    z-index: 998;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+li a, .dropbtn {
+    color: black;
+    padding: 14px 16px;
+    padding-left: 0;
+    text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn {
+    color: #e60000;
+}
+li.myAccount a{
+    padding: 20px;
+    color: white;
+}
+li.myAccount{
+    background-color: #e60000;
+    padding: 20px;
+}
+li.myAccount:hover a{
+    color: black;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 16px 25px 0 rgba(0,0,0,.08);
+    z-index: 1;
+    padding: 10px;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.banner{    
+    width: 100%;
+    height: 600px;
+    background: url(img/banner2.jpg) no-repeat center center;
+    background-size: cover;
+    padding-top: 70px;
+    box-shadow: inset 0px -55px 55px -46px rgba(0,0,0,0.75);
+}
+.mdi{
+    padding: 0 8px;
+}
+.mainContent{
+    padding: 20px;
+}
+.articlesGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.chatBox{
+    position: fixed;
+    background-color: white;
+    border-radius: 100%;
+    bottom: 20px;
+    right: 50px;
+    padding: 10px;
+    box-shadow: 0 4px 10px -3px #4D5057;
+    border: 5px solid transparent;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.blurb-ripple-out:after {
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	content: '';
+	-webkit-box-sizing: content-box; 
+	-moz-box-sizing: content-box; 
+	box-sizing: content-box;
+	top: 0;
+	left: 0;
+	padding: 0;
+	z-index: -1;
+	box-shadow: 0 0 0 2px #e60000;
+	opacity: 0;
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+}
+.blurb-ripple-out:hover {
+	background: white;
+	-webkit-transform: scale(0.93);
+	-moz-transform: scale(0.93);
+	-ms-transform: scale(0.93);
+	transform: scale(0.93);
+	color: #fff;
+}
+.blurb-ripple-out:hover:after {
+	-webkit-animation: sonarEffect 1.3s ease-out 75ms;
+	-moz-animation: sonarEffect 1.3s ease-out 75ms;
+	animation: sonarEffect 1.3s ease-out 75ms;
+}
+@keyframes sonarEffect {
+	0% {
+		opacity: 0.5;
+	}
+	40% {
+		opacity: 0.7;
+		box-shadow: 0 0 0 2px #e60000, 0 0 10px 10px #e60000, 0 0 0 10px #e60000;
+	}
+	100% {
+		box-shadow: 0 0 0 2px #e60000, 0 0 10px 10px #e60000, 0 0 0 10px #e60000;
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}
+.info{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+}
+.deals{
+    display: flex;
+    justify-content: space-around;
+}
+.deals div{
+    background-color: #e60000;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deals div:hover{
+    text-decoration: underline;
+}
+.deals div:hover .mdi{
+    text-decoration: underline;
+    background-color: rgba(0, 0, 0, 0.09);
+}
+.deals div .mdi{
+    background-color: rgba(0,0,0,.03);
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 20px;
+}
+.ricarica{
+    color: white;
+    background-color: #4D5057;
+    padding: 20px;
+    line-height: 50px;
+}
+
